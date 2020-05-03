@@ -13,20 +13,20 @@
       <ion-col>
         <ion-row size="12">
           <ion-col text-center size-sm="6" offset-sm="3">
-              <div class="container prettyAndUgly pretty">
-                <a [routerLink]="['/list/pretty']"><img src="/assets/img/lindo.jpg" alt="Cinque Terre"> </a>
+              <div class="container prettyAndUgly pretty" (click)="navCtrl.navigateForward(['/list', 'pretty'])">
+                <img src="/assets/img/lindo.jpg" alt="Cinque Terre">
                 <div class="center">cosas lindas</div>
-                <div class="center2">del edificio</div>
-                
+                <div class="center2">del edificio</div>      
               </div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col text-center size-sm="6" offset-sm="3">
-              <div class="container prettyAndUgly ugly">
-                <a [routerLink]="['/list/ugly']"><img src="/assets/img/feo.jpg" alt="Cinque Terre"> </a>
+              <div class="container prettyAndUgly ugly" (click)="navCtrl.navigateForward(['/list', 'ugly'])">
+                <img src="/assets/img/feo.jpg" alt="Cinque Terre">
                 <div class="center">cosas feas</div>
-                <div class="center2" style="top: 70%!important;">del edificio</div>              </div>
+                <div class="center2" style="top: 70%!important;">del edificio</div>              
+              </div>
           </ion-col>
         </ion-row>
       </ion-col>

@@ -17,7 +17,7 @@ export class GalleryPage implements OnInit {
   user: User;
 
   constructor(
-    private navCtrl: NavController,
+    public navCtrl: NavController,
     private authService: AuthenticateService,
     public alertController: AlertController
   ) {}
