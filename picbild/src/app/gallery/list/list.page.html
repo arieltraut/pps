@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="dark">
+      <ion-title>
+        {{type === 'pretty'? 'Cosas lindas': 'Cosas feas'}}
+      </ion-title>
+      <ion-avatar slot="end" style="height:40px; width: 40px; margin-right: 8px;">
+        <img [src]="user ? user.imageUrl : 'Loading...'" (click)="presentAlertLogout()"> 
+      </ion-avatar> 
+      <ion-buttons slot="start">
+          <ion-buttons slot="start">
+              <ion-back-button defaultHref="/gallery"></ion-back-button>
+          </ion-buttons>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid *ngIf="isLoading">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-spinner color="primary"></ion-spinner>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid
+    *ngIf="!isLoading && (!posts || posts.length <= 0)"
+  >
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <p>Todavia no se han cargado fotos.</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngIf="!isLoading && posts.length > 0">
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-card (click)= "navCtrl.navigateForward(['/details', featured.id])">
+          <ion-card-header>
+            <ion-card-title color="light">
+              {{featured.votes && featured.votes.length > 0 ? 'Foto mas votada' : 'Ultima foto subida'}}
+            </ion-card-title>
+            <ion-card-subtitle>
+              {{featured.votes ? featured.votes.length : 0}} {{featured.votes && featured.votes.length > 1 ? 'votos' : 'voto'}}
+            </ion-card-subtitle>
+          </ion-card-header>
+          <ion-img [src]="featured.imageUrl"></ion-img>
+          <!-- <ion-card-content>
+            <p>{{ featured.title }}</p>
+          </ion-card-content> -->
+          <!-- <div style="margin-bottom: 5px;">
+            <ion-button
+              fill="clear"
+              [routerLink]="['/', 'details', featured.id]"
+            >
+            <ion-chip color="light">
+              <ion-icon name="pin"></ion-icon>
+              <ion-label>info</ion-label>
+            </ion-chip>
+            </ion-button>
+          </div> -->
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-sm="8" offset-sm="2" text-center>
+        <ion-virtual-scroll
+        [items]="posts"
+        approxItemHeight="70px"
+      >
+          <ion-item
+            [routerLink]="['/', 'details', post.id]"
+            detail
+            *virtualItem="let post"
+          >
+            <ion-thumbnail slot="start">
+              <ion-img [src]="post.imageUrl"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{ post.title }}</h2>
+              <p style="font-weight: 800">{{ post.date ? (post.date | date: 'medium') : '' }}</p>
+            </ion-label>
+            <ion-badge *ngIf="post.votes && post.votes.length > 0" slot="end" mode="ios">{{post.votes.length}}</ion-badge>
+          </ion-item>
+        </ion-virtual-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/', 'new-post', type]">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
