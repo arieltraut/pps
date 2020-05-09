@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+   <!-- fab placed to the (vertical) center and end -->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="language"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="changeLanguage('es')"><ion-icon size="large" src="assets/languages/003-spain.svg"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="changeLanguage('en')"><ion-icon size="large" src="assets/languages/001-united-kingdom.svg"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="changeLanguage('pt')"><ion-icon size="large" src="assets/languages/002-portugal.svg"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-grid>    
+
+    <ion-row *ngFor="let animal of animales; let i = index" [attr.data-index]="i">
+      <ion-col>
+        <ion-card class="card animal">
+          <ion-row class="info">
+            <ion-col size="5">
+              <ion-card-subtitle>{{animal.species | translate}}</ion-card-subtitle>
+              <ion-card-title class="name b-line">{{animal.name | translate}}</ion-card-title>
+              <ion-icon name="play-circle" size="large" (click)="playSound(animal)" *ngIf="!isPlaying || animal != activeAnimal"></ion-icon>
+              <ion-icon name="pause-circle" size="large" (click)="togglePlayer(true)" *ngIf="isPlaying && animal == activeAnimal"></ion-icon>
+            </ion-col>
+            <ion-col size="7">              
+              <ion-icon class="image" src="{{animal.image | translate}}"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card>        
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

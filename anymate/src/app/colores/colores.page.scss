@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+
+.card{
+    padding: 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: -1px 16px 56px -31px rgba(0,0,0,0.73);
+  -moz-box-shadow: -1px 16px 56px -31px rgba(0,0,0,0.73);
+  box-shadow: -1px 16px 56px -31px rgba(0,0,0,0.73);
+  }
+  
+  .b-line:before{
+    content: "";
+    display: block;
+    width: 15%;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: -25%;
+    top: 40%;
+  }
+
+  .info {
+    background-color: #e2dfff;
+    border-radius: 12px;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
+  }
+  .info p {
+    margin: 0 !important;
+  }
+  
+  .color ion-item{
+    position: absolute;
+    bottom: -10px;
+    margin-left: -15px;
+  }
+
+  .color ion-icon {
+    color:#454545;
+    margin-right: 5px;
+  }
+  .color .name{
+    margin-top: 5px;
+    font-size: 25px;
+  }
+  .color .info{
+    height: 120px;
+  }
+  
+  .color .image{
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+      font-size: 8rem;
+  }
+
+  .empty{
+      height: 5rem;
+  }
+
+  .color ion-card-subtitle{
+    font-weight: 600;
+    color: white;
+  }
+
+  div[color-index="Blue.name"] {
+    background-color: #4b98e1;
+    --background: #4b98e1;
+  }
+
+  div[color-index="Green.name"] {
+    background-color: #0ccf00;
+    --background: #0ccf00;
+  }
+
+  div[color-index="Red.name"] {
+    --background: #fc7373; 
+    background-color: #fc7373;
+  }
+
+  div[color-index="Orange.name"] {
+    --background: #fab392; 
+    background-color: #fab392;
+  }
+
+  div[color-index="Yellow.name"] {
+    --background: #ffe13c;
+    background-color: #ffe13c;
+  }
+
+  div[color-index="Violet.name"] {
+    --background: #c68ce7;
+    background-color: #c68ce7;
+  }
+
+  div[color-index="Brown.name"] {
+    --background: rgb(168, 152, 133);
+    background-color: rgb(168, 152, 133);
+
+  }
+  div[color-index="Pink.name"] {
+    --background: rgb(255, 189, 240);
+    background-color: rgb(255, 189, 240);
+  }
+
+
+
+  .pins {
+    column-count: 3;
+  }
+  .pin {
+    display: inline-block;
+    margin: 0 2px 10px;
+    padding: 5px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+  }
+  .pins p {
+    // background-color: rgb(252, 214, 228);
+    border-radius: 20px;
+    // font-family: 'Paytone One', sans-serif;
+    font-family: 'Chewy', cursive;
+    font-size: 18px;
+
+    color:  rgb(236, 236, 236);
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(87, 87, 87);
+  }
+  .num {
+    padding: 0 30px 0 30px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #9466cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px!important;
+    font-family: 'Chewy';
+  }
+
+  .pin ion-icon {
+    font-size: 70px;
+    padding: 20px;
+    color: rgba(66, 66, 66,0.2);
+  }
+
+
+  // .color ion-icon {
+  //   color:#454545;
+  //   margin-right: 5px;
+  // }

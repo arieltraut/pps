@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "nima",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

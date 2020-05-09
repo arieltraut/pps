@@ -1,0 +1,58 @@
+<ion-content>
+
+  <ion-grid>    
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <!-- <h1>Bienvenidos a Anymate</h1> -->
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <div class="info">
+            <p>Presiona en un color para escuchar su pronunciacion</p>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row *ngFor="let color of colores; let i = index">
+      <ion-col>
+        <ion-card class="card color" [attr.color-index]="color.name">
+          <ion-row class="info">
+            <ion-col size="5">
+              <ion-card-subtitle>{{color.type | translate}}</ion-card-subtitle>
+              <ion-card-title class="name b-line">{{color.name | translate}}</ion-card-title>
+              <ion-item lines="none" *ngIf="!isPlaying || color != activeItem">
+                <ion-icon slot="start" size="large" name="play-circle" (click)="playSound(color)"></ion-icon>
+                <ion-label>{{"Play" | translate}}</ion-label>
+              </ion-item>
+              <ion-item lines="none"  *ngIf="isPlaying && color == activeItem">
+                <ion-icon slot="start" size="large" name="pause-circle" (click)="togglePlayer(true)"></ion-icon>
+                <ion-label>{{"Play" | translate}}</ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col size="7">              
+              <ion-icon class="image" src="{{color.image | translate}}"></ion-icon>div
+            </ion-col>
+          </ion-row>
+        </ion-card>        
+      </ion-col>
+    </ion-row> -->
+
+    <div class="pins">
+      <div class="pin" id="bla" text-center *ngFor="let color of colores; let i = index" (click)="playSound(color, $event)" [attr.color-index]="color.name">
+        <ion-icon class="image" src="assets/images/colors/pantone.svg"></ion-icon>
+        <p style="margin:0; text-align: center;">{{color.name | translate}}</p>
+      </div>
+    </div>
+
+
+    <div class="empty"></div>
+
+  </ion-grid>
+
+</ion-content>

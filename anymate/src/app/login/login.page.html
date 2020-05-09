@@ -1,0 +1,102 @@
+<!--SPLASH-->
+<div id="custom-overlay" [ngClass]="{'fadeOut': fade}" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="icono">
+      <div class="icono wobble-hor-bottom"> <img class="" style="width: 150px; margin: 0 auto;" src="assets/images/anymate-logo.png"></div>
+      <div><h2 class="ion-text-center title-splash wobble-hor-bottom">Anymate</h2></div> 
+    </div>    
+    <div class="nombre ion-text-center fade-in-bottom">
+      <h2 class="">Ariel Traut 4 "B"</h2>
+      <p>  <br>
+        <strong>  </strong> </p>
+      </div>
+    </div>
+  </div>
+  <!--SPLASH-->
+  
+    
+  <ion-content padding class="ion-padding background">
+    <ion-grid style="height: 100%">
+      <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+        
+
+        <div class="icono2 heartbeat"> <img class="" width="150px" src="assets/images/anymate-logo.png"></div>
+        <div><h2 class="ion-text-center title" style="color: aliceblue;">Anymate</h2></div> 
+
+        <form class="form" [formGroup]="validations_form">
+          <ion-list class="background-input">
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.email">
+                <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) &&
+                  (validations_form.get('email').dirty || validations_form.get('email').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+            <ion-item>
+              <ion-label>Email</ion-label>
+              <ion-input type="text" formControlName="email" class="ion-text-right"></ion-input>
+            </ion-item>
+
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.password">
+                <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) &&
+                  (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+            <ion-item>
+              <ion-label>Password</ion-label>
+              <ion-input type="password" formControlName="password" class="ion-text-right" required></ion-input>
+            </ion-item>
+          </ion-list>
+      
+          <ion-button color="light" class="submit-btn" (click)="loginUser(validations_form.value)" mode="ios" [disabled]="!validations_form.valid" expand="block">Iniciar sesión</ion-button>
+
+           
+            <!-- <ion-item class="ion-margin-bottom">
+              <ion-label  position="floating">Email</ion-label>
+              <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.email">
+                <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+            
+            <ion-item>
+              <ion-label  position="floating">Contraseña</ion-label>
+              <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.password">
+                <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div> -->
+
+
+
+            
+            <div class="error-message-2">{{errorMessage}}</div>
+          </form> 
+      </ion-row> 
+    </ion-grid>
+  </ion-content>
+  
+  <!-- <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <ion-button class="ingresos" expand="full" (click)="presentActionSheet()" >Ingresar como</ion-button>
+    </ion-toolbar>
+  </ion-footer> -->
+
+
+  <ion-footer (click)="presentActionSheet()">
+    <ion-toolbar >
+      <ion-title>Loguearse como...</ion-title>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+.card{
+    padding: 10px 20px 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: -1px 16px 56px -31px rgba(0,0,0,0.73);
+  -moz-box-shadow: -1px 16px 56px -31px rgba(0,0,0,0.73);
+  box-shadow: -1px 16px 56px -31px rgba(0,0,0,0.73);
+  }
+  
+  .b-line:before{
+    content: "";
+    display: block;
+    width: 15%;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: -25%;
+    top: 40%;
+  }
+
+  .info {
+    background-color: #e2dfff;
+    border-radius: 12px;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
+  }
+  .info p {
+    margin: 0 !important;
+  }
+  
+  .numero ion-item{
+    position: absolute;
+    bottom: -10px;
+    margin-left: -15px;
+  }
+
+  .numero ion-icon {
+    color:#454545;
+    margin-right: 5px;
+    position: absolute;
+    bottom: -10%;
+  }
+  .numero .name{
+    margin-top: 5px;
+    font-size: 25px;
+  }
+  .numero .info{
+    height: 100px;
+  }
+
+  .empty{
+      height: 5rem;
+  }
+
+  .numero ion-card-subtitle{
+    font-weight: 600
+  }
+
+  ion-card[color-index="0"] ,ion-card[color-index="6"] {
+    background-color: #DBDDFF;
+  }
+
+  ion-card[color-index="1"], ion-card[color-index="7"] {
+    background-color: #FEFFDB;
+  }
+
+  ion-card[color-index="2"] {
+    background-color: #DBFFE8;
+  }
+
+  ion-card[color-index="3"] {
+    background-color: #FFDBDB;
+  }
+
+  ion-card[color-index="5"] {
+    background-color: #cae9ff;
+  }
+
+
+  .behind{
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;    
+    bottom: -5%;
+    margin-bottom: 0;
+    font-size: 5rem;
+    right: -56%;
+  }
+
+
+  .pins {
+    column-count: 3;
+  }
+  .pin {
+    display: inline-block;
+    margin: 0 2px 10px;
+    padding: 5px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+  }
+  .pins p {
+    // background-color: rgb(252, 214, 228);
+    border-radius: 20px;
+    // font-family: 'Paytone One', sans-serif;
+    font-family: 'Chewy', cursive;
+    font-size: large;
+
+    color:  rgb(134, 132, 132);
+  }
+  .num {
+    padding: 0 30px 0 30px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #9466cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 80px!important;
+    font-family: 'Chewy';
+
+  }

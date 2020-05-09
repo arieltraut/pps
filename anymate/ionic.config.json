@@ -1,0 +1,7 @@
+{
+  "name": "nima",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

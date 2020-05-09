@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon class="ion-margin-start" size="large" src="assets/images/abc.svg"></ion-icon> 
+    </ion-buttons>
+    <ion-buttons slot="end" class="ion-margin-end">
+      <ion-button (click)="goLoginPage()">
+        Ingresar
+      </ion-button>
+      <ion-button class="b-bottom">
+        Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <div class="bienvenida">
+    
+    <ion-icon class="cat" src="assets/images/animals/bird.svg"></ion-icon> 
+    <h1 class="big">Hola!</h1>
+    <h1>Te damos la <br>bienvenida a <strong>Nima.</strong></h1>
+  </div>
+  
+  <form class="form" [formGroup]="validations_form">
+    
+    <ion-item>
+      <ion-label  position="floating" color="primary">Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.email">
+        <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    
+    <ion-item>
+      <ion-label  position="floating" color="primary">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+    </ion-item>
+    <div class="validation-errors">
+      <ng-container *ngFor="let validation of validation_messages.password">
+        <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+          {{ validation.message }}
+        </div>
+      </ng-container>
+    </div>
+    
+    
+    <div class="error-message-2">{{errorMessage}}</div>
+    <div class="error-message-2" *ngIf="success">{{successMessage}}{{timeLeft}}</div>
+    
+  </form>
+  
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  
+  <ion-button class="enter" (click)="tryRegister(validations_form.value)" [disabled]="!validations_form.valid"><ion-icon name="log-in-outline"></ion-icon></ion-button>
+  <ion-toolbar>
+  </ion-toolbar>
+  
+</ion-footer>

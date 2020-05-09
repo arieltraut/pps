@@ -1,0 +1,146 @@
+{
+  "Lion": {
+    "name": "Lion",
+    "species": "Mammal",
+    "image": "assets/images/animals/lion.svg",
+    "sound": "assets/sounds/lion.mp3"
+  },
+  "Fox": {
+    "name": "Fox",
+    "species": "Placental Mammals",
+    "image": "assets/images/animals/monkey.svg",
+    "sound": "assets/sounds/fox.mp3"
+  },
+  "Whale": {
+    "name": "Whale",
+    "species": "Bird",
+    "image": "assets/images/animals/flamingo.svg",
+    "sound": "assets/sounds/whale.mp3"
+  },
+  "Tiger": {
+    "name": "Tiger",
+    "species": "Mammal",
+    "image": "assets/images/animals/dog.svg",
+    "sound": "assets/sounds/tiger.mp3"
+  },
+  "Peacock": {
+    "name": "Peacock",
+    "species": "Mammal",
+    "image": "assets/images/animals/bull.svg",
+    "sound": "assets/sounds/peacock.mp3"
+  },
+  "Nightingale": {
+    "name": "Nightingale",
+    "species": "Bird",
+    "image": "assets/images/animals/nightingale.png",
+    "sound": "assets/sounds/nightingale.mp3"
+  },
+  "Squirrel": {
+    "name": "Squirrel",
+    "species": "Bird",
+    "image": "assets/images/animals/penguin.svg",
+    "sound": "assets/sounds/squirrel.mp3"
+  },
+  "Owl": {
+    "name": "Owl",
+    "species": "Bird",
+    "image": "assets/images/animals/toucan.svg",
+    "sound": "assets/sounds/owl.mp3"
+  },
+  "Quetzal": {
+    "name": "Quetzal",
+    "species": "Bird",
+    "image": "assets/images/animals/toucan.svg",
+    "sound": "assets/sounds/quetzal.mp3"
+  },
+  "Animals" : {
+    "singular":"Animal",
+    "plural":"Animals"
+  },
+  "Colors" : {
+    "singular":"Color",
+    "plural":"Colors"
+  },
+  "Numbers" : {
+    "singular":"Number",
+    "plural":"Numbers"
+  },
+  "Play": "Play me!",
+  "Learn": "Learn with Nima!",
+  "One" : {
+    "name": "One",
+    "sound": "assets/sounds/1.mp3"
+  },
+  "Two" : {
+    "name": "Two",
+    "sound": "assets/sounds/2.mp3"
+  },
+  "Three" : {
+    "name": "Three",
+    "sound": "assets/sounds/3.mp3"
+  },
+  "Four" : {
+    "name": "Four",
+    "sound": "assets/sounds/4.mp3"
+  },
+  "Five" : {
+    "name": "Five",
+    "sound": "assets/sounds/5.mp3"
+  },
+  "Six" : {
+    "name": "Six",
+    "sound": "assets/sounds/6.mp3"
+  },
+  "Seven" : {
+    "name": "Seven",
+    "sound": "assets/sounds/7.mp3"
+  },
+  "Eight" : {
+    "name": "Eight",
+    "sound": "assets/sounds/8.mp3"
+  },
+  "Nine" : {
+    "name": "Nine",
+    "sound": "assets/sounds/9.mp3"
+  },
+  "Blue": {
+    "name": "Blue",
+    "type": "Primary",
+    "sound": "assets/sounds/blue.mp3"
+  },
+  "Red": {
+    "name": "Red",
+    "type": "Primary",
+    "sound": "assets/sounds/red.mp3"
+  },
+  "Yellow": {
+    "name": "Yellow",
+    "type": "Primary",
+    "sound": "assets/sounds/yellow.mp3"
+  },
+  "Violet": {
+    "name": "Violet",
+    "type": "Secondary",
+    "sound": "assets/sounds/violet.mp3"
+  },
+  "Green": {
+    "name": "Green",
+    "type": "Secondary",
+    "sound": "assets/sounds/green.mp3"
+  },
+  "Pink": {
+    "name": "Pink",
+    "type": "Secondary",
+    "sound": "assets/sounds/pink.mp3"
+  },
+  "Orange": {
+    "name": "Orange",
+    "type": "Secundario",
+    "sound": "assets/sounds/orange.mp3"
+  },
+  "Brown": {
+    "name": "Brown",
+    "type": "Secundario",
+    "sound": "assets/sounds/brown.mp3"
+  }
+}

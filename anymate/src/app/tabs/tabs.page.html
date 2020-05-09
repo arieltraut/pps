@@ -1,0 +1,52 @@
+  <ion-toolbar mode=ios>
+    <ion-item class="logo" lines="none">
+      <!-- <ion-icon slot="start" size="large" src="assets/images/abc.svg"></ion-icon> -->
+      <ion-title>Anymate</ion-title>
+    </ion-item>
+    <ion-avatar slot="end" style="height:40px; width: 40px; margin-right: 8px;" *ngIf="user">
+      <img [src]="user ? user.imageUrl : 'Loading...'" (click)="presentAlertLogout()">
+    </ion-avatar> 
+  </ion-toolbar>
+
+
+
+
+
+<ion-content>
+
+  <!-- fab placed to the (vertical) center and end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="language"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button (click)="changeLanguage('pt')"><ion-icon size="large" src="assets/languages/002-portugal.svg"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="changeLanguage('en')"><ion-icon size="large" src="assets/languages/001-united-kingdom.svg"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="changeLanguage('es')"><ion-icon size="large" src="assets/languages/003-spain.svg"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-tabs>
+
+    <div class="tabs">
+      <ion-tab-bar slot="bottom" translucent=“true”>
+        <ion-tab-button tab="animales">
+          <ion-icon src="assets/images/tab-ani.svg"></ion-icon>
+          <ion-label>{{ 'Animals.plural' | translate}}</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="numeros">
+          <ion-icon src="assets/images/tab-num.svg"></ion-icon>
+          <ion-label>{{ 'Numbers.plural' | translate}}</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="colores">
+          <ion-icon src="assets/images/tab-col.svg"></ion-icon>
+          <ion-label>{{ 'Colors.plural' | translate}}</ion-label>
+        </ion-tab-button>
+
+      </ion-tab-bar>
+    </div>
+  </ion-tabs>
+
+</ion-content>

@@ -1,0 +1,137 @@
+{
+  "Lion": {
+    "name": "Leon",
+    "species": "Mamífero",
+    "sound": "assets/sounds/lion.mp3"
+  },
+  "Fox": {
+    "name": "Zorro",
+    "species": "Mamífero",
+    "sound": "assets/sounds/fox-es.mp3"
+  },
+  "Whale": {
+    "name": "Ballena",
+    "species": "Ave",
+    "sound": "assets/sounds/whale-es.mp3"
+  },
+  "Tiger": {
+    "name": "Tigre",
+    "species": "Mamífero",
+    "sound": "assets/sounds/tiger-es.mp3"
+  },
+  "Peacock": {
+    "name": "Pavo Real",
+    "species": "Mamífero",
+    "sound": "assets/sounds/peacock-es.mp3"
+  },
+  "Nightingale": {
+    "name": "Ruiseñor",
+    "species": "Insecto",
+    "sound": "assets/sounds/nightingale-es.mp3"
+  },
+  "Squirrel": {
+    "name": "Ardilla",
+    "species": "Ave",
+    "sound": "assets/sounds/squirrel-es.mp3"
+  },
+  "Owl": {
+    "name": "Búho",
+    "species": "Ave",
+    "sound": "assets/sounds/owl-es.mp3"
+  },
+  "Quetzal": {
+    "name": "Quetzal",
+    "species": "Ave",
+    "sound": "assets/sounds/quetzal-es.mp3"
+  },
+  "Animals" : {
+    "singular":"Animal",
+    "plural":"Animales"
+  },
+  "Colors" : {
+    "singular":"Color",
+    "plural":"Colores"
+  },
+  "Numbers" : {
+    "singular":"Número",
+    "plural":"Números"
+  },
+  "Play": "¡Escuchame!",
+  "Learn": "¡Aprendé con Nima!",
+  "One" : {
+    "name": "Uno",
+    "sound": "assets/sounds/1-es.mp3"
+  },
+  "Two" : {
+    "name": "Dos",
+    "sound": "assets/sounds/2-es.mp3"
+  },
+  "Three" : {
+    "name": "Tres",
+    "sound": "assets/sounds/3-es.mp3"
+  },
+  "Four" : {
+    "name": "Cuatro",
+    "sound": "assets/sounds/4-es.mp3"
+  },
+  "Five" : {
+    "name": "Cinco",
+    "sound": "assets/sounds/5-es.mp3"
+  },
+  "Six" : {
+    "name": "Seis",
+    "sound": "assets/sounds/6-es.mp3"
+  },
+  "Seven" : {
+    "name": "Siete",
+    "sound": "assets/sounds/7-es.mp3"
+  },
+  "Eight" : {
+    "name": "Ocho",
+    "sound": "assets/sounds/8-es.mp3"
+  },
+  "Nine" : {
+    "name": "Nueve",
+    "sound": "assets/sounds/9-es.mp3"
+  },
+  "Blue": {
+    "name": "Azul",
+    "type": "Primario",
+    "sound": "assets/sounds/blue-es.mp3"
+  },
+  "Red": {
+    "name": "Rojo",
+    "type": "Primario",
+    "sound": "assets/sounds/red-es.mp3"
+  },
+  "Yellow": {
+    "name": "Amarillo",
+    "type": "Primary",
+    "sound": "assets/sounds/yellow-es.mp3"
+  },
+  "Violet": {
+    "name": "Violeta",
+    "type": "Secundario",
+    "sound": "assets/sounds/violet-es.mp3"
+  },
+  "Green": {
+    "name": "Verde",
+    "type": "Secundario",
+    "sound": "assets/sounds/green-es.mp3"
+  },
+  "Pink": {
+    "name": "Rosa",
+    "type": "Secundario",
+    "sound": "assets/sounds/pink-es.mp3"
+  },
+  "Orange": {
+    "name": "Naranja",
+    "type": "Secundario",
+    "sound": "assets/sounds/orange-es.mp3"
+  },
+  "Brown": {
+    "name": "Marron",
+    "type": "Secundario",
+    "sound": "assets/sounds/brown-es.mp3"
+  }
+}

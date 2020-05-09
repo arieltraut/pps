@@ -99,7 +99,10 @@ export class NewPostPage implements OnInit {
       .then(loadingEl => {
         loadingEl.present();
 
-        const uploadTask = this.database.uploadImage(this.form.get('image').value);
+        const imgToUpload = this.form.get('image').value;
+        imgToUpload.name = 'picbild-' + new Date().toDateString;
+
+        const uploadTask = this.database.uploadImage(imgToUpload);
         uploadTask.task.on('state_changed', (snapshot) => {
           // Observe state change events such as progress, pause, and resume
           // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded

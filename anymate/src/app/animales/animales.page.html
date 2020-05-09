@@ -1,0 +1,72 @@
+<ion-content no-padding>
+
+  <ion-grid  no-padding>
+
+        <!-- <ion-row no-padding>
+          <ion-col size-sm="6" offset-sm="3" no-padding>
+            <div class="head">
+              <div>
+                <p>Bienvenidos!</p>
+                <p class="p2">Toca un animal para conocer su nombre.</p>
+              </div>
+            </div>
+            <ion-img no-padding src='assets/images/animals/whaleinthesky.png'></ion-img>
+          </ion-col>
+        </ion-row> -->
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <h1 class="welcome">Bienvenidos a Anymate</h1>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <div class="info">
+            <p>Presiona en un animal para escuchar su nombre</p>
+          </div>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+        <!-- <ion-card class="card animal" [attr.color-index]="0">
+          <ion-row class="info">
+            <ion-col size="5">
+              <ion-card-subtitle>{{animales[0].species | translate}}</ion-card-subtitle>
+              <ion-card-title class="name">Bienvenidos</ion-card-title>
+              <ion-item lines="none">
+                <ion-icon slot="start" size="large" name="play-circle" (click)="playSound(animales[0])"></ion-icon>
+                <ion-label>{{"Play" | translate}}</ion-label>
+              </ion-item>
+              <ion-item lines="none" *ngIf="isPlaying && animales[0] == activeAnimal">
+                <ion-icon slot="start" size="large" name="pause-circle" (click)="togglePlayer(true)"></ion-icon>
+                <ion-label>{{"Play" | translate}}</ion-label>
+              </ion-item>
+            </ion-col>
+            <ion-col size="7">              
+              <ion-icon class="image" src="{{animales[0].image | translate}}"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card>         -->
+
+
+
+    <!-- <ion-row>
+
+    </ion-row> -->
+
+      <div class="pins">
+        <div class="pin" id="bla" text-center *ngFor="let animal of animales; let i = index" (click)="playSound(animal, $event)" [attr.color-index]="i">
+          <ion-img class="anim" src="{{animal.image | translate}}"></ion-img>
+          <p style="margin:0; text-align: center;">{{animal.name | translate}}</p>
+        </div>
+      </div>
+
+    <div class="empty"></div>
+
+  </ion-grid>
+
+</ion-content>

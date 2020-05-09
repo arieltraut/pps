@@ -15,7 +15,7 @@ import { User } from './user';
 
 
 export class Post {
-    public date: Date;
+    public date?: Date;
     public id?: string;
     public imageUrl?: string;
     public title?: string;
