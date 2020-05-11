@@ -1,0 +1,93 @@
+
+<!--SPLASH-->
+<div id="custom-overlay" [ngClass]="{'fadeOut': fade}" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="icono">
+      <div class="icono jello-horizontal"> <img class="" style="width: 150px; margin: 0 auto;" src="assets/img/alertouch-logo.png"></div>
+      <div><h2 class="ion-text-center title-splash tracking-in-contract-bck">Alertouch</h2></div> 
+    </div>    
+    <div class="nombre ion-text-center fade-in-bottom">
+      <h2 class="">Ariel Traut 4 "B"</h2>
+      <p>  <br>
+        <strong>  </strong> </p>
+      </div>
+    </div>
+  </div>
+  <!--SPLASH-->
+
+
+
+<ion-content style="height: 100%;">
+  <ion-grid padding style="height: 100%;">
+    <ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%;">
+      <ion-col  style="text-align: center">
+
+        <div class="icono2 "> <img class="" width="150px" src="assets/img/alertouch-logo.png"></div>
+        <div><h2 class="ion-text-center title" style="color: aliceblue;">Alertouch</h2></div> 
+
+        <ion-list lines="none">
+
+
+
+
+          <form [formGroup]="loginForm">
+            <!-- <ion-item>
+              <ion-label color="dark" position="stacked">Email</ion-label>
+              <ion-input type="email" formControlName="email" placeholder="minombre@ejemplo.com"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="dark" position="stacked">Contraseña</ion-label>
+              <ion-input type="password" formControlName="password" placeholder="Contraseña"></ion-input>
+            </ion-item>
+
+
+            <form class="form" [formGroup]="validations_form"> -->
+              <ion-list class="background-input" *ngIf="!spinner">
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.email">
+                    <div class="error-message" *ngIf="loginForm.get('email').hasError(validation.type) &&
+                      (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+                <ion-item>
+                  <ion-label>Email</ion-label>
+                  <ion-input type="text" formControlName="email" class="ion-text-right"></ion-input>
+                </ion-item>
+    
+                <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.password">
+                    <div class="error-message" *ngIf="loginForm.get('password').hasError(validation.type) &&
+                      (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+                <ion-item>
+                  <ion-label>Password</ion-label>
+                  <ion-input type="password" formControlName="password" class="ion-text-right" required></ion-input>
+                </ion-item>
+
+              <ion-button color="light" class="submit-btn" (click)=login() mode="ios"  expand="block" [disabled]="!loginForm.valid">Iniciar sesión</ion-button>
+
+              </ion-list>
+          
+          </form>
+        </ion-list>
+            <div class="spin" *ngIf="spinner">
+              <ion-spinner name="crescent"></ion-spinner>
+            </div>
+            <!-- <ion-button color="dark" expand="block" (click)=login()>Ingresar</ion-button> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+  <ion-footer color="dark" (click)="creoSheet()">
+    <ion-toolbar >
+      <ion-title>Loguearse como...</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+

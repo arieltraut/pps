@@ -1,0 +1,8 @@
+{
+  "appId": "com.arieltraut.alertouch",
+  "appName": "Alertouch",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

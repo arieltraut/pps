@@ -1,0 +1,677 @@
+.item-has-focus ion-label.ion-color {  
+    color: var(--ion-color-dark) !important;
+  }
+
+  .logoPresentacion {
+        // width: 60px;
+        margin-bottom: 5%;
+        height:10%;
+        
+        margin-left: 5%;
+    text-align: center;
+    color: black;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+  // -webkit-animation: slideInRight 1500ms linear infinite both;
+  // animation: slideInRight 1500ms linear infinite both;
+  -webkit-animation: animation 2800ms linear infinite both;
+    animation: animation 2800ms linear infinite both;
+  } 
+  
+  .contenedorPresentacion {
+    display: inline-block;
+     -webkit-transform: translateZ(1px);
+      transform: translateZ(1px);   
+      // width: 60px;
+      height:110px;
+      margin-left: 25%;
+      margin-top: 16%;
+      text-align: center;
+      color: white;
+      // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: larger;
+     -webkit-animation: animation 5s linear infinite both;
+     animation: animation 5s linear infinite both;
+     -webkit-animation: animation 1500ms linear infinite both;
+     animation: animation 1500ms linear infinite both;
+    
+  }
+
+    @keyframes animate {
+      0% {
+        background-position: -500%;
+      }
+      100% {
+        background-position: 500%;
+      }
+    }
+    
+      #imgScreen{
+        width: 50%;
+        height: 150%;
+    
+      }
+
+      #custom-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100000;
+        width:100%;
+        background-color: white;
+      }
+
+      
+    ion-content{
+        --background: none;
+        background: #FF416C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  
+    sion-item, ion-list {
+      --background: none;
+      background-color: rgba(255, 255, 255, 0);
+    }
+    ion-footer {
+      position: absolute;
+      bottom: 0;
+    }
+    .background-input {
+      margin-bottom: 0!important;
+    
+      ion-item {
+          --border-color: transparent!important;
+          --highlight-height: 0;
+          --background: none;
+          background: rgb(241, 241, 241, 0);
+          --border-color: white;
+          border-style: solid;
+          border-color: white;
+          border-radius: 10px;
+          ion-label {
+              // color: #777!important;
+              --color: var(--ion-color-light)!important;
+              font-weight: 300;
+              font-size: 1rem!important;
+          }
+          ion-input {
+              --color: rgb(49, 49, 49);
+
+              // --background: none;
+              // background: rgb(26, 26, 26);
+          }
+          margin-bottom: 30px;
+      }
+    }
+
+
+      .spin{
+        text-align: center;
+      }
+      ion-spinner {
+        width: 28px;
+        height: 28px;
+        stroke: #444;
+        fill: #222;
+      }
+
+      #custom-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100000;
+        width:100%;
+        background: #FF416C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        
+      }
+      
+      .flb {
+        background: #FF416C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */        height:100%;
+        width:100%;
+        animation: pulse 1s linear forwards;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .Aligner-item {
+        max-width: 50%;
+      }
+      .Aligner-item--top {
+        align-self: flex-start;
+      }
+      .Aligner-item--bottom {
+        align-self: flex-end;
+      }
+      #custom-overlay img {
+        animation: animation 3100ms linear infinite both;
+        animation-delay: 1s;
+      }
+    
+      @keyframes pulse {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      .icono {
+        text-align: center;
+        // padding-bottom: 50px;
+      }
+      .icono2 {
+        text-align: center;
+        padding-top: 170px;
+      }
+    
+      .icono h2{
+          font-size: 2rem;
+      }
+
+
+
+      @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap');
+
+      .title-splash, .title {
+        // font-family: 'Gaegu', cursive;
+        font-family: 'Oswald', sans-serif;
+        color: var(--ion-color-light);
+      }
+      .title {
+        font-size: 30px;
+        margin-top: 0px!important;
+        margin-bottom: 30px;
+      }
+    
+      .nombre{
+          position: absolute;
+          bottom: 0;
+      }
+    
+      .nombre h2{
+        padding-bottom: 5px;
+        margin-bottom: -5px;
+        border-bottom: 1px solid #dedede;
+      }
+
+
+      .wobble-hor-bottom {
+        -webkit-animation: wobble-hor-bottom 0.8s 1s 2 both;
+                animation: wobble-hor-bottom 0.8s 1s 2 both;
+      }
+    
+     /* ----------------------------------------------
+     * Generated by Animista on 2020-5-8 23:7:18
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+    
+    /**
+     * ----------------------------------------
+     * animation wobble-hor-bottom
+     * ----------------------------------------
+     */
+    @-webkit-keyframes wobble-hor-bottom {
+      0%,
+      100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+      }
+      15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+                transform: translateX(-30px) rotate(-6deg);
+      }
+      30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+                transform: translateX(15px) rotate(6deg);
+      }
+      45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+                transform: translateX(-15px) rotate(-3.6deg);
+      }
+      60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+                transform: translateX(9px) rotate(2.4deg);
+      }
+      75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+                transform: translateX(-6px) rotate(-1.2deg);
+      }
+    }
+    @keyframes wobble-hor-bottom {
+      0%,
+      100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+      }
+      15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+                transform: translateX(-30px) rotate(-6deg);
+      }
+      30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+                transform: translateX(15px) rotate(6deg);
+      }
+      45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+                transform: translateX(-15px) rotate(-3.6deg);
+      }
+      60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+                transform: translateX(9px) rotate(2.4deg);
+      }
+      75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+                transform: translateX(-6px) rotate(-1.2deg);
+      }
+    }
+    
+    
+    .heartbeat {
+      -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+              animation: heartbeat 1.5s ease-in-out infinite both;
+    }
+    
+    /* ----------------------------------------------
+     * Generated by Animista on 2020-5-9 0:3:10
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+    
+    /**
+     * ----------------------------------------
+     * animation heartbeat
+     * ----------------------------------------
+     */
+     @-webkit-keyframes heartbeat {
+      from {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-transform-origin: center center;
+                transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+      10% {
+        -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+      }
+      17% {
+        -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+      33% {
+        -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+      }
+      45% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+    }
+    @keyframes heartbeat {
+      from {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-transform-origin: center center;
+                transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+      10% {
+        -webkit-transform: scale(0.91);
+                transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+      }
+      17% {
+        -webkit-transform: scale(0.98);
+                transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+      33% {
+        -webkit-transform: scale(0.87);
+                transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+      }
+      45% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+    }
+    
+    
+      
+    /* ----------------------------------------------
+     * Generated by Animista on 2020-5-1 20:5:45
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+    
+    /**
+     * ----------------------------------------
+     * animation text-focus-in
+     * ----------------------------------------
+     */
+     @-webkit-keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      @keyframes text-focus-in {
+        0% {
+          -webkit-filter: blur(12px);
+                  filter: blur(12px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-filter: blur(0px);
+                  filter: blur(0px);
+          opacity: 1;
+        }
+      }
+      
+      .slide-out-fwd-center {
+      -webkit-animation: slide-out-fwd-center 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+              animation: slide-out-fwd-center 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
+    
+    /* ----------------------------------------------
+     * Generated by Animista on 2020-5-1 20:8:47
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+    
+    /**
+     * ----------------------------------------
+     * animation slide-out-fwd-center
+     * ----------------------------------------
+     */
+     @-webkit-keyframes slide-out-fwd-center {
+        0% {
+          -webkit-transform: translateZ(1);
+                  transform: translateZ(1);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateZ(600px);
+                  transform: translateZ(600px);
+          opacity: 0;
+        }
+      }
+      @keyframes slide-out-fwd-center {
+        0% {
+          -webkit-transform: translateZ(1);
+                  transform: translateZ(1);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateZ(600px);
+                  transform: translateZ(600px);
+          opacity: 0;
+        }
+      }
+      
+    
+      .fadeOut {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.3s, opacity 0.3s linear;
+        display: none;
+      }
+    
+      .fade-in-bottom {
+      -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+              animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+    }
+    
+    /* ----------------------------------------------
+     * Generated by Animista on 2020-5-1 20:47:42
+     * Licensed under FreeBSD License.
+     * See http://animista.net/license for more info. 
+     * w: http://animista.net, t: @cssanimista
+     * ---------------------------------------------- */
+    
+    /**
+     * ----------------------------------------
+     * animation fade-in-bottom
+     * ----------------------------------------
+     */
+     @-webkit-keyframes fade-in-bottom {
+        0% {
+          -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fade-in-bottom {
+        0% {
+          -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+
+
+      .jello-horizontal {
+        -webkit-animation: jello-horizontal 0.9s 2s both;
+                animation: jello-horizontal 0.9s 2s both;
+      }
+
+
+   /* ----------------------------------------------
+ * Generated by Animista on 2020-5-9 20:37:33
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+
+
+.tracking-in-contract-bck {
+	-webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-5-9 20:33:28
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+            transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
+            transform: translateZ(400px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-in-bck-center {
+	-webkit-animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-center 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-5-9 20:35:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bck-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-center {
+  0% {
+    -webkit-transform: translateZ(600px);
+            transform: translateZ(600px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { NavController, ActionSheetController, LoadingController } from '@ionic/angular';
+import { NavController, ActionSheetController, LoadingController, ToastController } from '@ionic/angular';
 
 import { MessagesIndex } from '../services/user.model';
 
@@ -21,7 +21,8 @@ export class LoginPage implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     public actionSheetController: ActionSheetController,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    public toastController: ToastController
 
   ) { }
 
@@ -78,6 +79,8 @@ export class LoginPage implements OnInit {
         });
       }, err => {
         this.errorMessage =  this.authService.printErrorByCode (err.code);
+        this.creoToast(false, this.errorMessage);
+        this.loadingCtrl.dismiss();
         console.log(err.message);
       });
     });
@@ -129,6 +132,37 @@ export class LoginPage implements OnInit {
       }]
     });
     await actionSheet.present();
+  }
+
+
+  async creoToast(rta: boolean, mensaje: string) {
+
+    if (rta === true) {
+      const toast = await this.toastController.create({
+        message: mensaje,
+        color: 'success',
+        position: 'top',
+        duration: 2000
+      });
+      toast.present();
+    } else {
+      const toast = await this.toastController.create({
+        message: mensaje,
+        color: 'dark',
+        position: 'top',
+        duration: 2000 ,
+        buttons: [
+          {
+            text: 'Cerrar',
+            role: 'cancel',
+            handler: () => {
+              console.log('Cancel clicked');
+            }
+          }
+        ]
+      });
+      toast.present();
+    }
   }
 
 }

@@ -5,10 +5,26 @@ import { DatabaseService } from './database.service';
 import { Router } from '@angular/router';
 import { Plugins } from '@capacitor/core';
 
+export interface MessagesIndex {
+  [index: string]: string;
+}
+
 @Injectable()
 export class AuthenticateService {
 
   userData: any; // Save logged in user data
+
+  errorMessages = {
+    'invalid-argument': 'Se ha ingresado un argumento invalido.',
+    'invalid-disabled-field': 'El valor ingrsado para la propiedad de usuario es invalido.',
+    'user-not-found' : 'No existe ningun registro del usuario.',
+    'email-already-exists' : 'Ya existe un usuario registrado con ese email.',
+    'email-already-in-use' : 'Ya existe un usuario registrado con ese email.',
+    'wrong-password' : 'La contraseña que ha ingresado es invalida.'
+
+     /* ADD HERE THE OTHERs IDs AND THE CORRESPONDING MESSAGEs */
+
+  } as MessagesIndex;
 
 
   constructor( public afAuth: AngularFireAuth,
@@ -98,6 +114,17 @@ export class AuthenticateService {
         // this.router.navigate(['gallery']); // navegar de aca es una negrada
       });
     });
+  }
+
+
+  // translate errors
+  public printErrorByCode(code: string): string {
+    code = code.split('/')[1];
+    if (this.errorMessages[code]) {
+        return (this.errorMessages[code]);
+    } else {
+        return ('Ha ocurrido un error desconocido. \n Código del error:: ' + code);
+    }
   }
 
 

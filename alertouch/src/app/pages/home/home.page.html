@@ -1,0 +1,74 @@
+
+
+<ion-content [ngClass]="status ? 'color-change-2x' : 'bla'">
+
+
+  <ion-grid style="height: 100%"  >
+    <ion-toolbar >
+      <ion-item class="logo" lines="none">
+        <!-- <ion-icon slot="start" size="large" src="assets/images/abc.svg"></ion-icon> -->
+        <ion-title slot="start">Alertouch</ion-title>
+      </ion-item>
+      <ion-buttons slot="end" *ngIf="activar">
+        <ion-icon size="large" color="light" name="log-out" class="ion-margin-end" (click)="logout()"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+    
+    <ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%;">
+
+      <ion-row >
+        <ion-col style="text-align: center;">
+          <div class="circles one">
+            <div class="circles two">
+              <ion-button *ngIf="activar" color="light" (click)="activoAcelerometro(); status=!status">
+                <ion-icon  name="power-outline"></ion-icon>
+              </ion-button>
+              <ion-button *ngIf="!activar" color="danger" (click)="presentAlertRespuesta()">
+                <ion-icon  name="ellipse-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+
+        </ion-col>        
+      </ion-row>
+
+      
+      <ion-row >
+        <ion-col  style="text-align: center;">
+          <!-- <ion-button mode="ios ">Activar</ion-button> -->
+        </ion-col>        
+      </ion-row>
+
+
+    </ion-row>    
+  </ion-grid>
+
+
+  <!-- <ion-toolbar class="toolbar"> -->
+  <!-- <ion-button *ngIf="activar" class="iButton" color="danger" (click)="activoAcelerometro()" expand="full">
+    <img src="../../assets/icon/padlockU.png" alt="">
+  </ion-button> -->
+  <!-- </ion-toolbar> -->
+
+
+  <!-- <ion-toolbar class="toolbar"> -->
+  <!-- <ion-button *ngIf="!activar" class="iButton" color="success" (click)="showAlert()" expand="full">
+    <img src="../../assets/icon/padlock.png" alt="">
+
+  </ion-button> -->
+
+  <!-- </ion-toolbar> -->
+  <!-- <div *ngIf="activateKeyWord">
+    
+        <ion-label class="labelClass" color="dark" position="stacked">Ingrese palabra clave:</ion-label>
+        <ion-input type="password" [(ngModel)]="keyWord" placeholder="Palabra clave"></ion-input>
+        <ion-button color="dark" expand="full" (click)=stopAcelerometer()>Enviar</ion-button>
+  </div>
+</ion-content> -->
+  <!-- <ion-footer>
+
+    <ion-title style="text-align: center;">Estado:</ion-title>
+
+    <ion-text> {{estado}}</ion-text>
+
+  </ion-footer> -->

@@ -113,8 +113,5 @@ export class NumerosPage implements OnInit {
       }
     }
 
-    start(item, pause) {
-      this.playSound(item);
-      this.togglePlayer(pause);
-    }
+
   }

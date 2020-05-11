@@ -119,8 +119,5 @@ export class ColoresPage implements OnInit {
       }
     }
 
-    start(item, pause) {
-      this.playSound(item);
-      this.togglePlayer(pause);
-    }
+
   }

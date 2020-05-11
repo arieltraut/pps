@@ -23,12 +23,12 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-       //Language
+       // Language
        this.translateService.setDefaultLang('es');
        this.translateService.use('es');
 
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+       this.statusBar.styleDefault();
+       this.splashScreen.hide();
     });
   }
 }

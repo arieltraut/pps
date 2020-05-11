@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { NavController, ActionSheetController, LoadingController } from '@ionic/angular';
+import { NavController, ActionSheetController, LoadingController, ToastController } from '@ionic/angular';
 import { AuthenticateService } from '../services/authentication.service';
 
 @Component({
@@ -17,6 +17,7 @@ export class LoginPage implements OnInit {
     private authService: AuthenticateService,
     private formBuilder: FormBuilder,
     private loadingCtrl: LoadingController,
+    public toastController: ToastController,
   ) { }
 
   validationsForm: FormGroup;
@@ -62,7 +63,11 @@ export class LoginPage implements OnInit {
           this.loadingCtrl.dismiss();
           this.navCtrl.navigateForward('/gallery');
         }, err => {
+          this.errorMessage =  this.authService.printErrorByCode (err.code);
+          this.creoToast(false, this.errorMessage);
+          this.loadingCtrl.dismiss();
           this.errorMessage = err.message;
+
         });
       });
   }
@@ -127,6 +132,37 @@ export class LoginPage implements OnInit {
 
   ionViewDidEnter(){
     setTimeout(() => this.splash = false, 4000);
+  }
+
+
+  async creoToast(rta: boolean, mensaje: string) {
+
+    if (rta === true) {
+      const toast = await this.toastController.create({
+        message: mensaje,
+        color: 'success',
+        position: 'top',
+        duration: 2000
+      });
+      toast.present();
+    } else {
+      const toast = await this.toastController.create({
+        message: mensaje,
+        color: 'dark',
+        position: 'top',
+        duration: 2000 ,
+        buttons: [
+          {
+            text: 'Cerrar',
+            role: 'cancel',
+            handler: () => {
+              console.log('Cancel clicked');
+            }
+          }
+        ]
+      });
+      toast.present();
+    }
   }
 
 }
